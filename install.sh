@@ -6,8 +6,7 @@ sudo pacman -S xorg xorg-xinit i3-gaps kitty ranger rofi firefox neovim polybar 
 # Enable LightDM to start on boot
 sudo systemctl enable lightdm
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+# Install yay AUR helper
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -20,8 +19,7 @@ yay -S visual-studio-code-bin
 # Set up configuration and pictures directories
 CONFIG_DIR="$HOME/.config"
 REPO_CONFIG_DIR="config"
-
-REPO_PICTURES_DIR="Pictures"
+REPO_PICTURES_DIR="images"
 HOME_PICTURES_DIR="$HOME/Pictures"
 
 # Create Pictures directory if it doesn't exist and copy images
@@ -35,3 +33,6 @@ cp ".zshrc" "$HOME/"
 # Make scripts executable
 chmod +x "$CONFIG_DIR/rofi/powermenu.sh"
 chmod +x "$CONFIG_DIR/polybar/launch.sh"
+
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
