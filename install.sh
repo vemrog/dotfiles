@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install necessary packages
-sudo pacman -S xorg xorg-xinit i3-gaps kitty ranger rofi neovim polybar nerd-fonts feh zsh lightdm lightdm-gtk-greeter maim xclip dunst
+sudo pacman -S xorg xorg-xinit i3-gaps kitty ranger rofi neovim polybar nerd-fonts feh zsh lightdm lightdm-gtk-greeter maim xclip dunst ttf-fira-code
 
 # Enable LightDM to start on boot
 sudo systemctl enable lightdm
@@ -12,6 +12,23 @@ cd yay
 makepkg -si
 cd ..
 rm -rf yay
+
+# Install Oh My Zsh without running the new shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
+
+# Set up configuration and pictures directories
+CONFIG_DIR="$HOME/.config"
+REPO_CONFIG_DIR="config"
+REPO_PICTURES_DIR="images"
+HOME_PICTURES_DIR="$HOME/Pictures"
+
+# Create Pictures directory if it doesn't exist and copy images
+mkdir -p "$HOME_PICTURES_DIR"
+cp "$REPO_PICTURES_DIR/"* "$HOME_PICTURES_DIR/"
+
+# Restore the original .zshrc
+cp ".zshrc" "$HOME/"
+cp -r "$REPO_CONFIG_DIR/"* "$CONFIG_DIR/"
 
 # Make scripts executable
 chmod +x "$CONFIG_DIR/rofi/powermenu.sh"
@@ -28,20 +45,3 @@ if [[ "$install_extra" == "y" || "$install_extra" == "Y" ]]; then
 else
     echo "Skipping additional packages installation."
 fi
-
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Set up configuration and pictures directories
-CONFIG_DIR="$HOME/.config"
-REPO_CONFIG_DIR="config"
-REPO_PICTURES_DIR="images"
-HOME_PICTURES_DIR="$HOME/Pictures"
-
-# Create Pictures directory if it doesn't exist and copy images
-mkdir -p "$HOME_PICTURES_DIR"
-cp "$REPO_PICTURES_DIR/"* "$HOME_PICTURES_DIR/"
-
-# Copy configuration files to the appropriate directories
-cp -r "$REPO_CONFIG_DIR/"* "$CONFIG_DIR/"
-cp ".zshrc" "$HOME/"

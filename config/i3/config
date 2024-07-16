@@ -5,30 +5,30 @@ set $mod Mod4
 font pango:Fira Code 10
 
 # Autostart applications
-exec --no-startup-id dex --autostart --environment i3   # Autostart dex with i3 environment
-exec --no-startup-id nm-applet                           # Autostart NetworkManager Applet
-exec --no-startup-id dunst                               # Autostart Dunst notification daemon
-exec --no-startup-id ~/.config/polybar/launch.sh          # Autostart Polybar
-exec --no-startup-id feh --bg-scale ~/Downloads/wallpaper.png  # Set wallpaper with feh
-exec --no-startup-id picom -b                           # Autostart Picom compositor with backend
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id nm-applet
+exec --no-startup-id dunst
+exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id feh --bg-scale ~/Downloads/wallpaper.png
+exec --no-startup-id picom -b
 
 # Keybindings
-bindsym $mod+Return exec kitty                          # Launch terminal (Kitty)
-bindsym $mod+Shift+q kill                                # Kill focused window
-bindsym $mod+d exec rofi -show drun                      # Launch Rofi application launcher
-bindsym Mod4+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"  # Toggle keyboard layout
-bindsym $mod+p exec ~/.config/rofi/powermenu.sh          # Open power menu script with Rofi
-bindsym $mod+Shift+P exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"  # Take selective screenshot
+bindsym $mod+Return exec kitty
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec rofi -show drun
+bindsym Mod4+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"
+bindsym $mod+p exec ~/.config/rofi/powermenu.sh
+bindsym $mod+Shift+P exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
-bindsym $mod+Shift+Left move left                        # Move focus left
-bindsym $mod+Shift+Down move down                        # Move focus down
-bindsym $mod+Shift+Up move up                            # Move focus up
-bindsym $mod+Shift+Right move right                      # Move focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
-bindsym $mod+h split h                                   # Split window horizontally
-bindsym $mod+v split v                                   # Split window vertically
+bindsym $mod+h split h
+bindsym $mod+v split v
 
-bindsym $mod+f fullscreen toggle                         # Toggle fullscreen for focused window
+bindsym $mod+f fullscreen toggle
 
 set $ws1 "1"
 set $ws2 "2"
@@ -41,36 +41,36 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-bindsym $mod+1 workspace number $ws1                     # Switch to workspace 1
-bindsym $mod+2 workspace number $ws2                     # Switch to workspace 2
-bindsym $mod+3 workspace number $ws3                     # Switch to workspace 3
-bindsym $mod+4 workspace number $ws4                     # Switch to workspace 4
-bindsym $mod+5 workspace number $ws5                     # Switch to workspace 5
-bindsym $mod+6 workspace number $ws6                     # Switch to workspace 6
-bindsym $mod+7 workspace number $ws7                     # Switch to workspace 7
-bindsym $mod+8 workspace number $ws8                     # Switch to workspace 8
-bindsym $mod+9 workspace number $ws9                     # Switch to workspace 9
-bindsym $mod+0 workspace number $ws10                    # Switch to workspace 10
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
 
-bindsym $mod+Shift+1 move container to workspace number $ws1   # Move focused container to workspace 1
-bindsym $mod+Shift+2 move container to workspace number $ws2   # Move focused container to workspace 2
-bindsym $mod+Shift+3 move container to workspace number $ws3   # Move focused container to workspace 3
-bindsym $mod+Shift+4 move container to workspace number $ws4   # Move focused container to workspace 4
-bindsym $mod+Shift+5 move container to workspace number $ws5   # Move focused container to workspace 5
-bindsym $mod+Shift+6 move container to workspace number $ws6   # Move focused container to workspace 6
-bindsym $mod+Shift+7 move container to workspace number $ws7   # Move focused container to workspace 7
-bindsym $mod+Shift+8 move container to workspace number $ws8   # Move focused container to workspace 8
-bindsym $mod+Shift+9 move container to workspace number $ws9   # Move focused container to workspace 9
-bindsym $mod+Shift+0 move container to workspace number $ws10  # Move focused container to workspace 10
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+Shift+r restart                              # Restart i3wm
+bindsym $mod+Shift+r restart
 
 # Resize 
 mode "resize" {
-    bindsym Left resize shrink width 10 px or 10 ppt       # Shrink width of window
-    bindsym Down resize grow height 10 px or 10 ppt        # Grow height of window
-    bindsym Up resize shrink height 10 px or 10 ppt         # Shrink height of window
-    bindsym Right resize grow width 10 px or 10 ppt        # Grow width of window
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
     # Return to default mode
     bindsym Return mode "default"
@@ -81,16 +81,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Border
-client.focused          #6F6E69 #6F6E69 #6F6E69 #6F6E69    # Color settings for focused window
-client.unfocused        #343331 #343331 #343331 #343331      # Color settings for unfocused window
+client.focused #6F6E69 #6F6E69 #6F6E69 #6F6E69
+client.unfocused #343331 #343331 #343331 #343331
 
-for_window [class="^.*"] border pixel 0                    # No borders for all windows
-for_window [tiling_from="user"] border pixel 2             # Borders for manually tiled windows
-for_window [tiling_from="auto"] border pixel 2             # Borders for automatically tiled windows
+for_window [class="^.*"] border pixel 0
+for_window [tiling_from="user"] border pixel 2
+for_window [tiling_from="auto"] border pixel 2
 
 hide_edge_borders smart
 
 # Gaps settings
-gaps inner 10                                               # Inner gaps size
-gaps outer 4                                                # Outer gaps size
-smart_gaps on                                               # Enable smart gaps
+gaps inner 10
+gaps outer 4
+smart_gaps on
