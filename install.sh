@@ -31,9 +31,6 @@ cp ".zshrc" "$HOME/"
 chmod +x "$CONFIG_DIR/rofi/powermenu.sh"
 chmod +x "$CONFIG_DIR/polybar/launch.sh"
 
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Ask user if they want to install additional packages
 read -p "Do you want to install additional packages? (y/n): " install_extra
 
@@ -45,3 +42,6 @@ if [[ "$install_extra" == "y" || "$install_extra" == "Y" ]]; then
 else
     echo "Skipping additional packages installation."
 fi
+
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
