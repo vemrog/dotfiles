@@ -40,7 +40,7 @@ read -p "Do you want to install additional packages? (y/n): " install_extra
 if [[ "$install_extra" == "y" || "$install_extra" == "Y" ]]; then
     echo "Installing additional packages..."
     # Add your additional packages here
-    sudo pacman -S telegram-desktop firefox blender clang
+    sudo pacman -S telegram-desktop firefox blender clang obsidian
     yay -S visual-studio-code-bin
 else
     echo "Skipping additional packages installation."
