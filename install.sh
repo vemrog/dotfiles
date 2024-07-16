@@ -13,20 +13,6 @@ makepkg -si
 cd ..
 rm -rf yay
 
-# Set up configuration and pictures directories
-CONFIG_DIR="$HOME/.config"
-REPO_CONFIG_DIR="config"
-REPO_PICTURES_DIR="images"
-HOME_PICTURES_DIR="$HOME/Pictures"
-
-# Create Pictures directory if it doesn't exist and copy images
-mkdir -p "$HOME_PICTURES_DIR"
-cp "$REPO_PICTURES_DIR/"* "$HOME_PICTURES_DIR/"
-
-# Copy configuration files to the appropriate directories
-cp -r "$REPO_CONFIG_DIR/"* "$CONFIG_DIR/"
-cp ".zshrc" "$HOME/"
-
 # Make scripts executable
 chmod +x "$CONFIG_DIR/rofi/powermenu.sh"
 chmod +x "$CONFIG_DIR/polybar/launch.sh"
@@ -45,3 +31,17 @@ fi
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Set up configuration and pictures directories
+CONFIG_DIR="$HOME/.config"
+REPO_CONFIG_DIR="config"
+REPO_PICTURES_DIR="images"
+HOME_PICTURES_DIR="$HOME/Pictures"
+
+# Create Pictures directory if it doesn't exist and copy images
+mkdir -p "$HOME_PICTURES_DIR"
+cp "$REPO_PICTURES_DIR/"* "$HOME_PICTURES_DIR/"
+
+# Copy configuration files to the appropriate directories
+cp -r "$REPO_CONFIG_DIR/"* "$CONFIG_DIR/"
+cp ".zshrc" "$HOME/"
