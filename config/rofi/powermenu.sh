@@ -6,7 +6,7 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 
 # Options
 shutdown='󰐥'
-reboot='󰜉'
+reboot='󰑙'
 logout='󰿅'
 
 # Rofi CMD
