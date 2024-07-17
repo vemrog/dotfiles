@@ -1,10 +1,10 @@
 [global]
     monitor = 0
     follow = none
-    width = 250
-    height = 300
-    origin = top-right
-    offset = 14x52
+    width = 300
+    height = 150
+    origin = bottom-right
+    offset = 10x45
     scale = 0
     notification_limit = 0
     progress_bar = true
@@ -15,8 +15,8 @@
     indicate_hidden = yes
     transparency = 0
     separator_height = 2
-    padding = 24
-    horizontal_padding = 16
+    padding = 10
+    horizontal_padding = 10
     text_icon_padding = 0
     frame_width = 2
     separator_color = auto
