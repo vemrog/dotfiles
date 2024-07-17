@@ -5,8 +5,6 @@ set $mod Mod4
 font pango:Fira Code 10
 
 # Autostart applications
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
@@ -16,7 +14,7 @@ exec --no-startup-id picom -b
 bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun
-bindsym Mod4+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"
+bindsym $mod+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"
 bindsym $mod+p exec ~/.config/rofi/powermenu.sh
 bindsym $mod+Shift+P exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
