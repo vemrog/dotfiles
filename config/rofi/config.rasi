@@ -13,38 +13,27 @@ configuration {
     background-colour: var(background);
     foreground-colour: var(foreground);
     alternate-background: var(background-alt);
-    normal-background: var(background);
-    normal-foreground: var(foreground);
-    urgent-background: var(urgent);
-    urgent-foreground: var(background);
-    active-background: var(active);
-    active-foreground: var(background);
     selected-normal-background: var(selected);
     selected-normal-foreground: var(background);
-    selected-urgent-background: var(active);
-    selected-urgent-foreground: var(background);
     selected-active-background: var(urgent);
     selected-active-foreground: var(background);
     alternate-normal-background: var(background);
     alternate-normal-foreground: var(foreground);
-    alternate-urgent-background: var(urgent);
-    alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
     alternate-active-foreground: var(background);
 }
 
 window {
     transparency: "real";
-    location: center;
-    anchor: center;
+    location: north;
+    anchor: north;
     fullscreen: false;
     width: 800px;
-    x-offset: 0px;
-    y-offset: 0px;
+    y-offset: 610px;
     enabled: true;
     margin: 0px;
-    padding: 0px;
-    border: 2px solid;
+    padding: 10px;
+    border: 0px solid;
     border-radius: 0px;
     border-color: @border-colour;
     cursor: "default";
@@ -55,48 +44,12 @@ mainbox {
     enabled: true;
     spacing: 10px;
     margin: 0px;
-    padding: 30px;
-    border: 0px solid;
+    padding: 20px;
+    border: 2px solid;
     border-radius: 0px 0px 0px 0px;
     border-color: @border-colour;
     background-color: transparent;
     children: [ "inputbar", "listview" ];
-}
-
-inputbar {
-    enabled: true;
-    spacing: 10px;
-    margin: 0px;
-    padding: 0px 0px 10px 10px;
-    border: 0px;
-    border-radius: 0px;
-    border-color: @border-colour;
-    background-color: @background-colour;
-    text-color: @foreground-colour;
-    children: [ "prompt", "entry" ];
-}
-
-prompt {
-    enabled: true;
-    background-color: inherit;
-    text-color: inherit;
-}
-
-textbox-prompt-colon {
-    enabled: true;
-    expand: false;
-    str: "::";
-    background-color: inherit;
-    text-color: inherit;
-}
-
-entry {
-    enabled: true;
-    background-color: inherit;
-    text-color: inherit;
-    cursor: text;
-    placeholder: "";
-    placeholder-color: inherit;
 }
 
 listview {
@@ -110,85 +63,22 @@ listview {
     reverse: false;
     fixed-height: true;
     fixed-columns: true;
-    spacing: 0px;
-    margin: 0px;
-    padding: 0px;
     border: 0px solid;
-    border-radius: 0px;
     border-color: @border-colour;
-    background-color: transparent;
-    text-color: @foreground-colour;
-    cursor: "default";
-}
-
-scrollbar {
-    handle-width: 5px;
-    handle-color: @handle-colour;
-    border-radius: 0px;
-    background-color: @alternate-background;
 }
 
 element {
     enabled: true;
     spacing: 10px;
-    margin: 0px;
     padding: 5px;
     border: 0px solid;
-    border-radius: 0px;
     border-color: @border-colour;
     background-color: transparent;
     text-color: @foreground-colour;
     cursor: pointer;
 }
 
-element normal.normal {
-    background-color: var(normal-background);
-    text-color: var(normal-foreground);
-}
-
-element normal.urgent {
-    background-color: var(urgent-background);
-    text-color: var(urgent-foreground);
-}
-
-element normal.active {
-    background-color: var(active-background);
-    text-color: var(active-foreground);
-}
-
 element selected.normal {
     background-color: var(alternate-background);
     text-color: var(foreground-colour);
-}
-
-element selected.urgent {
-    background-color: var(selected-urgent-background);
-    text-color: var(selected-urgent-foreground);
-}
-
-element selected.active {
-    background-color: var(selected-active-background);
-    text-color: var(selected-active-foreground);
-}
-
-element alternate.normal {
-    background-color: var(alternate-normal-background);
-    text-color: var(alternate-normal-foreground);
-}
-
-element alternate.urgent {
-    background-color: var(alternate-urgent-background);
-    text-color: var(alternate-urgent-foreground);
-}
-
-element alternate.active {
-    background-color: var(alternate-active-background);
-    text-color: var(alternate-active-foreground);
-}
-
-element-icon {
-    background-color: transparent;
-    text-color: inherit;
-    size: 24px;
-    cursor: inherit;
 }
