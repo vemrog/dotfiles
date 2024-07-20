@@ -1,5 +1,5 @@
 # Dotfiles
-![unux.png](https://raw.githubusercontent.com/vemrog/dotfiles/main/images/unix.png)
+![unux.png](https://raw.githubusercontent.com/vemrog/dotfiles/main/images/image.png)
 
 # Installation
 
