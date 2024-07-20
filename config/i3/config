@@ -16,15 +16,14 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"
 bindsym $mod+p exec ~/.config/rofi/powermenu.sh
-bindsym $mod+Shift+P exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
-
+bindsym $mod+Shift+P exec --no-startup-id maim --select "/home/$USER/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png"
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+v split 
 
 bindsym $mod+f fullscreen toggle
 
