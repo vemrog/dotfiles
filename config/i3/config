@@ -24,7 +24,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+h split h
-bindsym $mod+v split 
+bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+r mode "resize"
