@@ -2,7 +2,7 @@
 
 configuration {
     show-icons: false;
-    font: "Fira Code Nerd Font bold 24";
+    font: "Fira Code 24";
 }
 
 window {
