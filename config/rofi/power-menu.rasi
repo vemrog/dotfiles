@@ -21,7 +21,7 @@ mainbox {
     spacing: 15px;
     border: 2px solid;
     border-radius: 0px;
-    border-color: @selected;
+    border-color: @border;
     background-color: @background;
     children: [ "listview" ];
 }
@@ -32,7 +32,7 @@ listview {
     dynamic: true;
     layout: horizontal;
     margin: 15px;
-    border-color: @selected;
+    border-color: @border;
     background-color: transparent;
     text-color: @foreground;
     cursor: "default";
