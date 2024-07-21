@@ -10,7 +10,7 @@ window {
     anchor: north;
     height: 135 px;
     width: 400 px;
-    y-offset: 895px;
+    y-offset: 900px;
     enabled: true;
     padding: 15px;
     background-color: @background;

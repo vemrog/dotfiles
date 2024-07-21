@@ -91,5 +91,5 @@ hide_edge_borders smart
 
 # Gaps settings
 gaps inner 10
-gaps outer 4
+gaps outer 5
 smart_gaps on
