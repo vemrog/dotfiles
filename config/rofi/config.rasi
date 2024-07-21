@@ -3,82 +3,57 @@
 configuration {
     modi: "drun";
     show-icons: false;
-    drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-    window-format: "{w} · {c} · {t}";
-}
-
-* {
-    border-colour: var(selected);
-    handle-colour: var(selected);
-    background-colour: var(background);
-    foreground-colour: var(foreground);
-    alternate-background: var(background-alt);
-    selected-normal-background: var(selected);
-    selected-normal-foreground: var(background);
-    selected-active-background: var(urgent);
-    selected-active-foreground: var(background);
-    alternate-normal-background: var(background);
-    alternate-normal-foreground: var(foreground);
-    alternate-active-background: var(active);
-    alternate-active-foreground: var(background);
+    drun-display-format: "{name}";
+    font: "Fira Code 12";
 }
 
 window {
-    transparency: "real";
     location: north;
     anchor: north;
-    fullscreen: false;
     width: 800px;
-    y-offset: 590px;
-    enabled: true;
-    margin: 0px;
-    padding: 10px;
+    y-offset: 575px;
+    padding: 15px;
     border: 0px solid;
     border-radius: 0px;
-    border-color: @border-colour;
-    cursor: "default";
-    background-color: @background-colour;
+    border-color: var(selected);
+    background-color: var(background);
 }
 
 mainbox {
-    enabled: true;
     spacing: 10px;
-    margin: 0px;
-    padding: 20px;
+    padding: 15px;
     border: 2px solid;
-    border-radius: 0px 0px 0px 0px;
-    border-color: @border-colour;
-    background-color: transparent;
+    border-color: var(selected);
     children: [ "inputbar", "listview" ];
 }
 
 listview {
     enabled: true;
     columns: 1;
-    lines: 12;
+    lines: 10;
     cycle: true;
     dynamic: true;
     scrollbar: false;
     layout: vertical;
-    reverse: false;
     fixed-height: true;
     fixed-columns: true;
     border: 0px solid;
-    border-color: @border-colour;
+    border-color: var(selected);
 }
 
 element {
     enabled: true;
     spacing: 10px;
-    padding: 5px;
-    border: 0px solid;
-    border-color: @border-colour;
-    background-color: transparent;
-    text-color: @foreground-colour;
-    cursor: pointer;
+    padding: 7px;
+    border-color: var(selected);
+    text-color: var(foreground);
 }
 
 element selected.normal {
-    background-color: var(alternate-background);
-    text-color: var(foreground-colour);
+    background-color: var(background-alt);
+    text-color: var(foreground);
+}
+
+element alternate.normal {
+    background-color: var(background);
 }

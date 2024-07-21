@@ -2,13 +2,13 @@
 set $mod Mod4
 
 # Font setting
-font pango:Fira Code 10
+font pango:Fira Code 12
 
 # Autostart applications
 exec --no-startup-id dunst
-exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec --no-startup-id picom -b
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Keybindings
 bindsym $mod+Return exec kitty
@@ -17,6 +17,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"
 bindsym $mod+p exec ~/.config/rofi/powermenu.sh
 bindsym $mod+Shift+P exec --no-startup-id maim --select "/home/$USER/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png"
+
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -26,6 +27,9 @@ bindsym $mod+h split h
 bindsym $mod+v split 
 
 bindsym $mod+f fullscreen toggle
+bindsym $mod+r mode "resize"
+
+bindsym $mod+Shift+r restart
 
 set $ws1 "1"
 set $ws2 "2"
@@ -60,8 +64,6 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+Shift+r restart
-
 # Resize 
 mode "resize" {
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -75,11 +77,11 @@ mode "resize" {
     bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
 
 # Border
-client.focused #6F6E69 #6F6E69 #6F6E69 #6F6E69
-client.unfocused #343331 #343331 #343331 #343331
+# class             border  backgr. text    indicator
+client.focused      #6F6E69 #6F6E69 #6F6E69 #6F6E69
+client.unfocused    #343331 #343331 #343331 #343331
 
 for_window [class="^.*"] border pixel 0
 for_window [tiling_from="user"] border pixel 2
