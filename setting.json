@@ -1,0 +1,19 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "workbench.statusBar.visible": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "editor.fontFamily": "fira-code-nerd, FiraCode Nerd Font, Consolas, 'Courier New', monospace",
+    "window.customTitleBarVisibility": "auto",
+    "workbench.editor.showTabs": "single",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Flexoki Dark Blue",
+    "editor.minimap.enabled": false,
+    
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "explorer.confirmDelete": false,
+    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+    "workbench.iconTheme": "a-file-icon-vscode"
+}
