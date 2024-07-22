@@ -2,7 +2,7 @@
 
 <img src="https://github.com/vemrog/dotfiles/blob/main/.gallery/image.png" align="right" width="400px">
 
-- [i3-gaps](https://i3wm.org/): window manager
+- [i3-wm](https://i3wm.org/): window manager
 - [picom](https://github.com/yshui/picom): compositor
 - [kitty ](https://sw.kovidgoyal.net/kitty/): terminal
 - [polybar](https://polybar.github.io/): status bars

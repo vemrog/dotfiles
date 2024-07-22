@@ -4,7 +4,7 @@
 REPO_DIR=$(pwd)
 
 # Install necessary packages
-sudo pacman -S xorg xorg-xinit i3-gaps kitty ranger rofi neovim polybar nerd-fonts feh zsh lightdm lightdm-gtk-greeter maim xclip dunst ttf-fira-code picom ueberzug
+sudo pacman -S xorg xorg-xinit i3-wm kitty ranger rofi neovim polybar nerd-fonts feh zsh lightdm lightdm-gtk-greeter maim xclip dunst ttf-fira-code picom ueberzug
 
 # Enable LightDM to start on boot
 sudo systemctl enable lightdm
