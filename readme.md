@@ -1,6 +1,6 @@
 # Dotfiles
 
-<img src="https://raw.githubusercontent.com/vemrog/dotfiles/main/images/image.png" align="right" width="400px">
+<img src="https://github.com/vemrog/dotfiles/blob/main/.gallery/image.png" align="right" width="400px">
 
 - [i3-gaps](https://i3wm.org/): window manager
 - [picom](https://github.com/yshui/picom): compositor
@@ -9,6 +9,10 @@
 - [rofi ](https://github.com/davatorium/rofi): application | power menu
 - [vs-code](https://aur.archlinux.org/packages/visual-studio-code-bin): editor
 
+## Showcase
+![power-menu](https://github.com/vemrog/dotfiles/blob/main/.gallery/power-menu.png)
+
+![rofi](https://raw.githubusercontent.com/vemrog/dotfiles/main/.gallery/rofi.png)
 
 ## Code Setup
 - Icon theme: [Atom Material Icons](https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vscode)
