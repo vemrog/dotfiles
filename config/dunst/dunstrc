@@ -4,7 +4,7 @@
     width = 300
     height = 150
     origin = bottom-right
-    offset = 10x45
+    offset = 25x65
     scale = 0
     notification_limit = 0
     progress_bar = true
@@ -15,14 +15,14 @@
     indicate_hidden = yes
     transparency = 0
     separator_height = 2
-    padding = 10
-    horizontal_padding = 10
+    padding = 15
+    horizontal_padding = 15
     text_icon_padding = 0
     frame_width = 2
     separator_color = auto
     sort = yes
     idle_threshold = 0
-    font = Fira Code 11
+    font = Fira Code 12
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -57,12 +57,12 @@
 [urgency_low]
     background = "#1C1B1A"
     foreground = "#FFFCF0"
-    timeout = 5
+    timeout = 10
 
 [urgency_normal]
     background = "#1C1B1A"
     foreground = "#FFFCF0"
-    timeout = 5
+    timeout = 10
 
 [urgency_critical]
     background = "#1C1B1A"
