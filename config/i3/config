@@ -17,6 +17,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"
 bindsym $mod+p exec ~/.config/rofi/powermenu.sh
 bindsym $mod+Shift+P exec --no-startup-id maim --select "/home/$USER/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png"
+bindsym $mod+l exec i3lock
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
