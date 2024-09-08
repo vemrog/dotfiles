@@ -29,6 +29,8 @@ cp "$REPO_PICTURES_DIR/"* "$HOME_PICTURES_DIR/"
 
 cp -r "$REPO_CONFIG_DIR/"* "$CONFIG_DIR/"
 
+cp "$REPO_DIR/.xsession" "$HOME/.xsession"
+
 # Make scripts executable
 chmod +x "$CONFIG_DIR/rofi/powermenu.sh"
 chmod +x "$CONFIG_DIR/polybar/launch.sh"
@@ -41,17 +43,6 @@ if [[ "$install_extra" == "y" || "$install_extra" == "Y" ]]; then
     yay -S visual-studio-code-bin gcc-arm-none-eabi libnewlib-arm-none-eabi
 else
     echo "Skipping additional packages installation."
-fi
-
-# Ask if user wants to change monitor refresh rate
-read -p "You want to change the screen resolution and hertz to 1920x1080 - rate 74.-97: " change_refresh_rate
-
-if [[ "$change_refresh_rate" == "y" || "$change_refresh_rate" == "Y" ]]; then
-    echo 'xrandr --output HDMI-0 --mode 1920x1080 --rate 74.97' >> ~/.xprofile
-    chmod +x ~/.xprofile
-    echo "Monitor refresh rate set to 74.97 Hz."
-else
-    echo "Skipping monitor refresh rate change."
 fi
 
 # Install Oh My Zsh 
