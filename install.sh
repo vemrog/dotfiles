@@ -21,15 +21,24 @@ CONFIG_DIR="$HOME/.config"
 REPO_CONFIG_DIR="config"
 REPO_PICTURES_DIR="images"
 HOME_PICTURES_DIR="$HOME/Pictures"
+NVIM_CONFIG_DIR="$CONFIG_DIR/nvim"
 
 ranger --copy-config=all
 
 mkdir -p "$HOME_PICTURES_DIR"
+mkdir -p "$NVIM_CONFIG_DIR"
+
 cp "$REPO_PICTURES_DIR/"* "$HOME_PICTURES_DIR/"
 
 cp -r "$REPO_CONFIG_DIR/"* "$CONFIG_DIR/"
 
 cp "$REPO_DIR/.xsession" "$HOME/.xsession"
+
+if [ -d "$REPO_DIR/nvim" ]; then
+    cp -r "$REPO_DIR/nvim/"* "$NVIM_CONFIG_DIR/"
+else
+    echo "Directory 'nvim' does not exist in the current directory."
+fi
 
 # Make scripts executable
 chmod +x "$CONFIG_DIR/rofi/powermenu.sh"
@@ -39,8 +48,8 @@ read -p "Do you want to install additional packages? (y/n): " install_extra
 
 if [[ "$install_extra" == "y" || "$install_extra" == "Y" ]]; then
     echo "Installing additional packages..."
-    sudo pacman -S telegram-desktop firefox blender obsidian clang cmake keepassxc
-    yay -S visual-studio-code-bin gcc-arm-none-eabi libnewlib-arm-none-eabi
+    sudo pacman -S ripgrep lazygit bottom python nodejs npm telegram-desktop firefox obsidian keepassxc
+    yay -S visual-studio-code-bin gcc-arm-none-eabi libnewlib-arm-none-eabi tree-sitter go-diskusage
 else
     echo "Skipping additional packages installation."
 fi
