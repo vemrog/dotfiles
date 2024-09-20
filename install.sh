@@ -48,7 +48,7 @@ read -p "Do you want to install additional packages? (y/n): " install_extra
 
 if [[ "$install_extra" == "y" || "$install_extra" == "Y" ]]; then
     echo "Installing additional packages..."
-    sudo pacman -S ripgrep lazygit bottom python nodejs npm telegram-desktop firefox obsidian keepassxc
+    sudo pacman -S kicad ripgrep lazygit bottom python nodejs npm telegram-desktop firefox obsidian keepassxc
     yay -S visual-studio-code-bin gcc-arm-none-eabi libnewlib-arm-none-eabi tree-sitter go-diskusage
 else
     echo "Skipping additional packages installation."
