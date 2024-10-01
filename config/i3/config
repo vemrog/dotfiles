@@ -6,7 +6,7 @@ font pango:Fira Code 12
 
 # Autostart applications
 exec --no-startup-id dunst
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
+exec --no-startup-id feh bg-fill ~/Pictures/wallpaper.png
 exec --no-startup-id picom -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
