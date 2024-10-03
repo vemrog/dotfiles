@@ -29,10 +29,16 @@ mkdir -p "$HOME_PICTURES_DIR"
 mkdir -p "$NVIM_CONFIG_DIR"
 
 cp "$REPO_PICTURES_DIR/"* "$HOME_PICTURES_DIR/"
-
 cp -r "$REPO_CONFIG_DIR/"* "$CONFIG_DIR/"
 
-cp "$REPO_DIR/.xsession" "$HOME/.xsession"
+# Copy i3 desktop entry
+sudo cp "$REPO_CONFIG_DIR/i3.desktop" "/usr/share/xsessions/i3.desktop"
+
+# Copy ~/.xinitrc file
+cp "$REPO_CONFIG_DIR/.xinitrc" "$HOME/.xinitrc"
+
+# Make the .xinitrc executable
+chmod +x "$HOME/.xinitrc"
 
 if [ -d "$REPO_DIR/nvim" ]; then
     cp -r "$REPO_DIR/nvim/"* "$NVIM_CONFIG_DIR/"
