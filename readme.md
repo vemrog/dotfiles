@@ -14,10 +14,6 @@
 
 ![rofi](https://raw.githubusercontent.com/vemrog/dotfiles/main/.gallery/rofi.png)
 
-## Code Setup
-- Icon theme: [Atom Material Icons](https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vscode)
-- Setting: [setting.json](https://github.com/vemrog/dotfiles/blob/main/setting.json)
-
 ## Installation
 
 ```
