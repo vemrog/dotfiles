@@ -81,9 +81,8 @@ mode "resize" {
 }
 
 # Border
-# class             border  backgr. text    indicator
-client.focused      #6F6E69 #6F6E69 #6F6E69 #6F6E69
-client.unfocused    #343331 #343331 #343331 #343331
+client.focused      #575653 #575653 #575653 #575653
+client.unfocused    #282726 #282726 #282726 #282726
 
 for_window [class="^.*"] border pixel 0
 for_window [tiling_from="user"] border pixel 2
