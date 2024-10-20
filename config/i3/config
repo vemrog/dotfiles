@@ -82,7 +82,7 @@ mode "resize" {
 
 # Border
 client.focused      #575653 #575653 #575653 #575653
-client.unfocused    #282726 #282726 #282726 #282726
+client.unfocused    #403E3C #403E3C #403E3C #403E3C
 
 for_window [class="^.*"] border pixel 0
 for_window [tiling_from="user"] border pixel 2
