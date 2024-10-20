@@ -1,0 +1,97 @@
+# Modifier key
+set $mod Mod4
+
+# Font setting
+font pango:Fira Code 12
+
+# Autostart applications
+exec --no-startup-id dunst
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+exec --no-startup-id picom -b
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Keybindings
+bindsym $mod+Return exec kitty
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+space exec "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle"
+bindsym $mod+p exec ~/.config/rofi/powermenu.sh
+bindsym $mod+w exec ~/.config/rofi/wifi-menu.sh
+bindsym Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png"
+bindsym $mod+o exec --no-startup-id /home/vemrog/Downloads/Outline-Client.AppImage
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+r mode "resize"
+
+bindsym $mod+Shift+r restart
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Resize 
+mode "resize" {
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+# Border
+# class             border  backgr. text    indicator
+client.focused      #6F6E69 #6F6E69 #6F6E69 #6F6E69
+client.unfocused    #343331 #343331 #343331 #343331
+
+for_window [class="^.*"] border pixel 0
+for_window [tiling_from="user"] border pixel 2
+for_window [tiling_from="auto"] border pixel 2
+
+hide_edge_borders smart
+
+# Gaps settings
+gaps inner 10
+gaps outer 5
+smart_gaps on
