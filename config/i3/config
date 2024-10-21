@@ -73,6 +73,8 @@ mode "resize" {
 client.focused      #575653 #575653 #575653 #575653
 client.unfocused    #282726 #282726 #282726 #282726
 
+hide_edge_borders smart
+
 for_window [class="^.*"] border pixel 0
 for_window [tiling_from="user"] border pixel 2
 for_window [tiling_from="auto"] border pixel 2
