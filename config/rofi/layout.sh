@@ -1,24 +1,53 @@
 #!/bin/bash
 
-option0="stacked"
-option1="tabbed"
-option2="split"
-option3="floating"
-option4="fullscreen"
+# Current Theme
+dir="$HOME/.config/rofi"
+theme='layout'
 
-options="$option0\n$option1\n$option2\n$option3\n$option4"
+# Options
+tabbed='󰖯'
+split='󰤼'
+floating='󰖲'
+fullscreen='󰊓'
 
-selected="$(echo -e "$options" | rofi -lines 5 -dmenu -p "i3layout")"
-case $selected in
-    $option0)
-        i3-msg layout stacked;;
-    $option1)
-        i3-msg layout tabbed;;
-    $option2)
-        i3-msg layout toggle split;;
-    $option3)
-        i3-msg floating toggle;;
-    $option4)
-        i3-msg fullscreen toggle;;
+# Rofi CMD
+rofi_cmd() {
+	rofi -dmenu \
+		-p "i3layout" \
+		-theme ${dir}/${theme}.rasi
+}
+
+# Pass variables to rofi dmenu
+run_rofi() {
+	echo -e "$tabbed\n$split\n$floating\n$fullscreen" | rofi_cmd
+}
+
+# Execute Command
+run_cmd() {
+	if [[ $1 == 'tabbed' ]]; then
+		i3-msg layout tabbed
+	elif [[ $1 == 'split' ]]; then
+		i3-msg layout split
+	elif [[ $1 == 'floating' ]]; then
+		i3-msg floating toggle
+	elif [[ $1 == 'fullscreen' ]]; then
+		i3-msg fullscreen toggle
+	fi
+}
+
+# Actions
+chosen="$(run_rofi)"
+case ${chosen} in
+    $tabbed)
+		run_cmd tabbed
+        ;;
+    $split)
+		run_cmd split
+        ;;
+    $floating)
+		run_cmd floating
+        ;;
+    $fullscreen)
+		run_cmd fullscreen
+        ;;
 esac
-
