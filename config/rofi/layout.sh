@@ -27,7 +27,7 @@ run_cmd() {
 	if [[ $1 == 'tabbed' ]]; then
 		i3-msg layout tabbed
 	elif [[ $1 == 'split' ]]; then
-		i3-msg layout split
+		i3-msg layout toggle split
 	elif [[ $1 == 'floating' ]]; then
 		i3-msg floating toggle
 	elif [[ $1 == 'fullscreen' ]]; then
@@ -51,3 +51,4 @@ case ${chosen} in
 		run_cmd fullscreen
         ;;
 esac
+
