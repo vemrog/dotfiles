@@ -53,6 +53,7 @@ cp -r "$REPO_DIR/nvim/"* "$NVIM_CONFIG_DIR/"
 chmod +x "$CONFIG_DIR/polybar/launch.sh"
 chmod +x "$CONFIG_DIR/rofi/powermenu.sh"
 chmod +x "$CONFIG_DIR/rofi/wifi-menu.sh"
+chmod +x "$CONFIG_DIR/rofi//layout.sh"
 
 # Ask to install additional packages
 read -p "Do you want to install additional packages? (y/n): " install_extra
