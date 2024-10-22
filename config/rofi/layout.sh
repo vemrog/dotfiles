@@ -12,9 +12,11 @@ else
     option3="floating (toggle on)"
 fi
 
-options="$option0\n$option1\n$option2\n$option3"
+option4="fullscreen (toggle)"
 
-selected="$(echo -e "$options" | rofi -lines 4 -dmenu -p "i3layout")"
+options="$option0\n$option1\n$option2\n$option3\n$option4"
+
+selected="$(echo -e "$options" | rofi -lines 5 -dmenu -p "i3layout")"
 case $selected in
     $option0)
         i3-msg layout stacked;;
@@ -24,4 +26,6 @@ case $selected in
         i3-msg layout toggle split;;
     $option3)
         i3-msg floating toggle;;
+    $option4)
+        i3-msg fullscreen toggle;;
 esac
