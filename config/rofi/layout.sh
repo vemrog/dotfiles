@@ -3,16 +3,8 @@
 option0="stacked"
 option1="tabbed"
 option2="split"
-
-floating_state=$(i3-msg -t get_tree | jq '.. | select(.floating? == true)' | wc -l)
-
-if [ "$floating_state" -gt 0 ]; then
-    option3="floating (toggle off)"
-else
-    option3="floating (toggle on)"
-fi
-
-option4="fullscreen (toggle)"
+option3="floating"
+option4="fullscreen"
 
 options="$option0\n$option1\n$option2\n$option3\n$option4"
 
@@ -29,3 +21,4 @@ case $selected in
     $option4)
         i3-msg fullscreen toggle;;
 esac
+
