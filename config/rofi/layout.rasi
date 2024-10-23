@@ -9,7 +9,7 @@ window {
     location: north;
     anchor: north;
     height: 135 px;
-    width: 520 px;
+    width: 515 px;
     y-offset: 880px;
     enabled: true;
     padding: 15px;
