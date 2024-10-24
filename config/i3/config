@@ -74,16 +74,16 @@ mode "resize" {
 }
 
 # Border
-client.focused      #575653 #575653 #575653 #575653
+client.focused      #403E3C #403E3C #403E3C #403E3C
 client.unfocused    #282726 #282726 #282726 #282726
 
 hide_edge_borders smart
 
 for_window [class="^.*"] border pixel 0
-for_window [tiling_from="user"] border pixel 2
-for_window [tiling_from="auto"] border pixel 2
+for_window [tiling_from="user"] border pixel 3
+for_window [tiling_from="auto"] border pixel 3
 
 # Gaps settings
-gaps inner 8
+gaps inner 6
 gaps outer 4
 smart_gaps on
