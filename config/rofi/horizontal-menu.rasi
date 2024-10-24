@@ -2,25 +2,20 @@
 
 configuration {
     show-icons: false;
-    font: "Fira Code 24";
+    font: "Fira Code 26";
 }
 
 window {
-    location: north;
-    anchor: north;
-    height: 135 px;
-    width: 515 px;
-    y-offset: 880px;
+    location: center;
+    width: 30%;    
     enabled: true;
-    padding: 15px;
+    padding: 10px;
     background-color: @background;
 }
 
 mainbox {
     enabled: true;
-    spacing: 15px;
     border: 2px solid;
-    border-radius: 0px;
     border-color: @border;
     background-color: @background;
     children: [ "listview" ];
@@ -28,21 +23,20 @@ mainbox {
 
 listview {
     enabled: true;
+    columns: 4;
+    lines: 1;
     cycle: true;
     dynamic: true;
-    layout: horizontal;
-    margin: 15px;
-    border-color: @border;
-    background-color: transparent;
-    text-color: @foreground;
-    cursor: "default";
+    layout: vertical;
+    fixed-columns: true;
+    spacing: 0px; 
+    margin: 10px;
+    padding: 0px;
 }
 
 element {
-    height: 110 px;
-    width: 110 px;
     enabled: true;
-    padding: 15px 15px;
+    padding: 15px 0px;
     background-color: @background;
     text-color: @foreground;
 }
@@ -50,7 +44,6 @@ element {
 element-text {
     background-color: transparent;
     text-color: @foreground;
-    cursor: inherit;
     horizontal-align: 0.5;
     vertical-align: 0.5;
 }
