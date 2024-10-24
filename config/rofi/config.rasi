@@ -10,7 +10,7 @@ configuration {
 
 window {
     location: center;
-    width: 800px;
+    width: 850px;
     y-offset: 235px;
     padding: 10px;
     border: 0px solid;
