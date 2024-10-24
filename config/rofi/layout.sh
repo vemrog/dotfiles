@@ -2,7 +2,7 @@
 
 # Current Theme
 dir="$HOME/.config/rofi"
-theme='layout'
+theme='horizontal-menu'
 
 # Options
 tabbed='󰖯'
