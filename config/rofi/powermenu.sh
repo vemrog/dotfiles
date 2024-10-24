@@ -8,7 +8,7 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 shutdown='󰐥'
 reboot='󰑙'
 logout='󰿅'
-lock=''
+lock=''
 
 # Rofi CMD
 rofi_cmd() {
@@ -20,7 +20,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$shutdown\n$reboot\n$logout\n$lock" | rofi_cmd
+	echo -e "$shutdown\n$lock\n$reboot\n$logout" | rofi_cmd
 }
 
 # Execute Command
@@ -39,8 +39,8 @@ run_cmd() {
 		elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 			qdbus org.kde.ksmserver /KSMServer logout 0 0 0
 		fi
-	elif [[ $1 == '--lock' ]]; then
-		betterlockscreen -l 
+	elif [[ $1 == '--lock' ]];then
+		betterlockscreen -l dim
 	fi
 }
 
@@ -56,8 +56,4 @@ case ${chosen} in
     $logout)
 		run_cmd --logout
         ;;
-    $lock)
-		run_cmd --lock
-        ;;
 esac
-
