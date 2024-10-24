@@ -1,6 +1,6 @@
 # Current Theme
 dir="$HOME/.config/rofi"
-theme='power-menu'
+theme='horizontal-menu'
 
 uptime="`uptime -p | sed -e 's/up //g'`"
 
